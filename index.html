@@ -1,1 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Te invito a mi último colapso emocional!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Permanent+Marker&display=swap');
+
+        body {
+            background-color: #ff00ff;
+            background-image: repeating-linear-gradient(45deg, #ff00ff 0, #ff00ff 20px, #ffff00 20px, #ffff00 40px);
+            font-family: 'Comic Neue', cursive, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            color: #000;
+        }
+
+        .tarjeta {
+            background: #ffffff;
+            border: 8px dashed #00ffff;
+            border-radius: 30px;
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            position: glob;
+        }
+
+        h1 {
+            font-family: 'Permanent Marker', cursive;
+            color: #ff0000;
+            font-size: 2.5rem;
+            text-shadow: 3px 3px #ffff00;
+            margin-bottom: 10px;
+        }
+
+        .banderines {
+            font-size: 2rem;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+        }
+
+        .mensaje {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #330033;
+            background: #ffff99;
+            padding: 20px;
+            border-radius: 15px;
+            border: 3px dotted #ff00ff;
+            margin: 20px 0;
+            line-height: 1.5;
+        }
+
+        .payaso-img {
+            width: 200px;
+            margin: 15px auto;
+            border-radius: 50%;
+            border: 5px solid #ff0000;
+            animation: flotar 2s infinite alternate;
+        }
+
+        @keyframes flotar {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+
+        .btn-descarga {
+            background-color: #00ff00;
+            color: #000;
+            font-family: 'Permanent Marker', cursive;
+            font-size: 1.8rem;
+            padding: 15px 30px;
+            border: 5px solid #000;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            box-shadow: 0 5px 0 #000;
+            transition: 0.1s;
+        }
+
+        .btn-descarga:active {
+            transform: translateY(4px);
+            box-shadow: 0 1px 0 #000;
+        }
+
+        .footer {
+            font-size: 1rem;
+            color: #ffffff;
+            text-shadow: 2px 2px #000;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tarjeta">
+        <div class="banderines">🚩🎉🎈🤡🎂🎈🎉🚩</div>
+        
+        <h1>¡ATENCIÓN!</h1>
+        
+        <!-- Imagen del meme del payaso -->
+        <img src="https://i.ibb.co/3s6Q1f9/payaso-golpe.jpg" alt="Payaso meme" class="payaso-img" onerror="this.src='https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400'">
+
+        <div class="mensaje">
+            Estás cordialmente invitado a <b>rompernos la madre</b>, besarnos y me muerdas la lengua incómodamente y lo intentemos una última vez para ya definir nuestros caminos.<br><br>
+            <span style="color: #ff0000; font-size: 1.6rem;">Te espero, hija de puta. ❤️🤡</span>
+        </div>
+
+        <a href="#" class="btn-descarga" id="descargarBtn">📥 DESCARGAR PASE VIP</a>
+    </div>
+
+    <div class="footer">
+        Evento 100% formal. Trae dignidad (si tienes).
+    </div>
+
+    <script>
+        document.getElementById('descargarBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            const textoArchivo = `=========================================
+      INVITACIÓN OFICIAL - EVENTO TÓXICO
+=========================================
+
+Estás cordialmente invitado a rompernos la madre, besarnos y me muerdas la lengua incómodamente y lo intentemos una última vez para ya definir nuestros caminos.
+
+te espero, hija de puta.
+
+Atentamente: mich 
+`;
+            const blob = new Blob([textoArchivo], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'invitacion_oficial_toxica.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        });
+    </script>
+
+</body>
+</html>
 
